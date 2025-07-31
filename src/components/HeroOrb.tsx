@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Sphere, Float, Text3D, MeshDistortMaterial } from "@react-three/drei";
+import { OrbitControls, Sphere, Float } from "@react-three/drei";
 import { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
@@ -20,18 +20,18 @@ const AnimatedOrb = () => {
     <Float speed={2} rotationIntensity={1} floatIntensity={0.5}>
       <Sphere
         ref={meshRef}
-        args={[2, 64, 64]}
+        args={[2, 32, 32]}
         onPointerEnter={() => setHovered(true)}
         onPointerLeave={() => setHovered(false)}
       >
-        <MeshDistortMaterial
+        <meshStandardMaterial
           color="#0066FF"
           transparent
-          opacity={0.6}
-          distort={0.3}
-          speed={2}
+          opacity={0.7}
           roughness={0.1}
           metalness={0.8}
+          emissive="#0033AA"
+          emissiveIntensity={0.2}
         />
       </Sphere>
     </Float>
@@ -48,19 +48,19 @@ const FloatingElements = () => {
           rotationIntensity={0.5}
           floatIntensity={0.3}
           position={[
-            Math.cos((i * Math.PI * 2) / 6) * 5,
-            Math.sin((i * Math.PI * 2) / 6) * 2,
-            Math.sin((i * Math.PI * 2) / 6) * 3
+            Math.cos((i * Math.PI * 2) / 6) * 4,
+            Math.sin((i * Math.PI * 2) / 6) * 1.5,
+            Math.sin((i * Math.PI * 2) / 6) * 2
           ]}
         >
           <mesh>
-            <boxGeometry args={[0.5, 0.5, 0.5]} />
+            <boxGeometry args={[0.4, 0.4, 0.4]} />
             <meshStandardMaterial 
               color="#00FFFF" 
               transparent 
-              opacity={0.7}
+              opacity={0.8}
               emissive="#0066FF"
-              emissiveIntensity={0.2}
+              emissiveIntensity={0.3}
             />
           </mesh>
         </Float>
@@ -75,10 +75,12 @@ export const HeroOrb = () => {
       <Canvas
         camera={{ position: [0, 0, 8], fov: 45 }}
         className="pointer-events-auto"
+        gl={{ antialias: true, alpha: true }}
       >
-        <ambientLight intensity={0.3} />
+        <ambientLight intensity={0.4} />
         <pointLight position={[10, 10, 10]} intensity={1} color="#0066FF" />
-        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#00FFFF" />
+        <pointLight position={[-10, -10, -10]} intensity={0.6} color="#00FFFF" />
+        <directionalLight position={[0, 10, 5]} intensity={0.5} />
         
         <AnimatedOrb />
         <FloatingElements />
@@ -87,7 +89,9 @@ export const HeroOrb = () => {
           enablePan={false}
           enableZoom={false}
           autoRotate
-          autoRotateSpeed={0.5}
+          autoRotateSpeed={0.8}
+          maxPolarAngle={Math.PI / 1.5}
+          minPolarAngle={Math.PI / 3}
         />
       </Canvas>
       
