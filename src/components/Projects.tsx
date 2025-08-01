@@ -12,17 +12,17 @@ const projects = [
     name: "Hire A Driver",
     description: "Premium ride-sharing platform with real-time tracking, smart matching algorithms, and seamless payment integration. Built for modern urban mobility.",
     image: hireDriverImage,
-    tech: ["React Native", "Node.js", "MongoDB", "Socket.io", "Stripe"],
-    liveLink: "#",
-    githubLink: "#",
-    category: "Mobile App"
+    tech: ["PHP", "jQuery", "MySQL", "Javascript", "Bootstrap"],
+    liveLink: "https://d121.vvelocity.com/Hire_a_driver/",
+    githubLink: "https://github.com/DhawalPrajapat/Hire-car-driver",
+    category: "Website"
   },
   {
     name: "Jain Sangh App",
     description: "Community management platform for religious organizations with event scheduling, member directory, and spiritual content management system.",
     image: jainSanghImage,
     tech: ["Flutter", "Laravel", "MySQL", "Firebase", "Payment Gateway"],
-    liveLink: "#",
+    liveLink: "https://play.google.com/store/apps/details?id=app.management.jainsangh",
     githubLink: "#",
     category: "Mobile App"
   },
@@ -31,17 +31,17 @@ const projects = [
     description: "Local marketplace connecting vendors and customers with inventory management, order tracking, and multi-vendor support for small businesses.",
     image: nagarBazaarImage,
     tech: ["React", "Node.js", "PostgreSQL", "AWS S3", "Razorpay"],
-    liveLink: "#",
+    liveLink: "https://play.google.com/store/apps/details?id=com.webikka.nagarbazaar",
     githubLink: "#",
     category: "Web Platform"
   },
   {
-    name: "FilingWorld",
-    description: "Comprehensive legal and tax filing platform with document management, automated workflows, and compliance tracking for businesses.",
+    name: "24ItSupport – IT Services & Products Platform",
+    description: "Comprehensive IT services and product platform with service booking, enquiry management, secure Razorpay integration, multilingual support, and role-based dashboards for users, admins, and providers.",
     image: filingWorldImage,
-    tech: ["Laravel", "Vue.js", "MySQL", "AWS", "DocuSign API"],
-    liveLink: "#",
-    githubLink: "#",
+    tech: ["Laravel", "Vue.js", "MySQL", "RazorPay", "API"],
+    liveLink: "https://24itsupport.com/",
+    githubLink: "https://github.com/Uday14051405/24ITSupport",
     category: "Business Platform"
   }
 ];
