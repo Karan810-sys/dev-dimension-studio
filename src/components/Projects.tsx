@@ -1,6 +1,7 @@
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import hireDriverImage from "@/assets/hire-driver-project.jpg";
 import jainSanghImage from "@/assets/jain-sangh-project.jpg";
 import nagarBazaarImage from "@/assets/nagar-bazaar-project.jpg";
@@ -46,8 +47,10 @@ const projects = [
 ];
 
 export const Projects = () => {
+  const navigate = useNavigate();
+
   return (
-    <section className="py-20 bg-background">
+    <section id="projects" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -128,6 +131,7 @@ export const Projects = () => {
           <Button 
             size="lg"
             variant="outline"
+            onClick={() => navigate('/projects')}
             className="glass-card hover:glow-border transition-all duration-300"
           >
             View All Projects

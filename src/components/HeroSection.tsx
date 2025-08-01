@@ -1,8 +1,16 @@
 import { HeroOrb } from "./HeroOrb";
 import { Button } from "./ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    projectsSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="min-h-screen relative overflow-hidden bg-background">
       {/* Animated background */}
@@ -43,6 +51,7 @@ export const HeroSection = () => {
             <div className="flex flex-wrap gap-4">
               <Button 
                 size="lg" 
+                onClick={scrollToProjects}
                 className="bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 glow-primary"
               >
                 View Our Work
@@ -52,6 +61,7 @@ export const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="lg"
+                onClick={() => navigate('/contact')}
                 className="glass-card hover:glow-border transition-all duration-300"
               >
                 Get In Touch
@@ -60,13 +70,28 @@ export const HeroSection = () => {
 
             {/* Social links */}
             <div className="flex gap-4 pt-4">
-              <Button variant="ghost" size="icon" className="hover:text-primary transition-colors">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:text-primary transition-colors"
+                onClick={() => window.open('#', '_blank')}
+              >
                 <Github className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary transition-colors">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:text-primary transition-colors"
+                onClick={() => window.open('#', '_blank')}
+              >
                 <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="hover:text-primary transition-colors">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="hover:text-primary transition-colors"
+                onClick={() => navigate('/contact')}
+              >
                 <Mail className="h-5 w-5" />
               </Button>
             </div>

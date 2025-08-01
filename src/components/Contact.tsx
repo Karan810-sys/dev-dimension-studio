@@ -1,10 +1,13 @@
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { Mail, Phone, Linkedin, ExternalLink, Sparkles } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const Contact = () => {
+  const navigate = useNavigate();
+
   return (
-    <section className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -49,6 +52,7 @@ export const Contact = () => {
 
               <Button 
                 size="lg" 
+                onClick={() => navigate('/contact')}
                 className="bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 glow-primary group"
               >
                 <Mail className="mr-2 h-5 w-5 group-hover:animate-float" />
