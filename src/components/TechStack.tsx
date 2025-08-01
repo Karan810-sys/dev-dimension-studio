@@ -57,10 +57,10 @@ export const TechStack = () => {
         {/* Stats section */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16 pt-16 border-t border-border/50">
           {[
-            { label: "Projects Completed", value: "50+" },
-            { label: "Happy Clients", value: "30+" },
-            { label: "Years Experience", value: "4+" },
-            { label: "Technologies", value: "25+" },
+            { label: "Projects Completed", value: "10+" },
+            { label: "Happy Clients", value: "5+" },
+            { label: "Years Experience", value: "3+" },
+            { label: "Technologies", value: "10+" },
           ].map((stat, index) => (
             <div 
               key={stat.label} 

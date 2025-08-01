@@ -74,7 +74,7 @@ export const HeroSection = () => {
                 variant="ghost" 
                 size="icon" 
                 className="hover:text-primary transition-colors"
-                onClick={() => window.open('#', '_blank')}
+                onClick={() => window.open('https://github.com/DhawalPrajapat', '_blank')}
               >
                 <Github className="h-5 w-5" />
               </Button>
@@ -82,7 +82,7 @@ export const HeroSection = () => {
                 variant="ghost" 
                 size="icon" 
                 className="hover:text-primary transition-colors"
-                onClick={() => window.open('#', '_blank')}
+                onClick={() => window.open('https://www.linkedin.com/in/dhawal-kumar-prajapat-598537238/', '_blank')}
               >
                 <Linkedin className="h-5 w-5" />
               </Button>

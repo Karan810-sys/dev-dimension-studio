@@ -104,10 +104,10 @@ export const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground">LinkedIn</h4>
                     <a 
-                      href="#" 
+                      href="https://www.linkedin.com/in/dhawal-kumar-prajapat-598537238/" 
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      Connect with us
+                      https://www.linkedin.com/in/dhawal-kumar-prajapat-598537238/
                     </a>
                   </div>
                 </div>
