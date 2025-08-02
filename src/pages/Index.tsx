@@ -3,6 +3,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { HeroSection } from "@/components/HeroSection";
 import { TechStack } from "@/components/TechStack";
 import { Projects } from "@/components/Projects";
+import { Products } from "@/components/Products";
 import { Services } from "@/components/Services";
 import { Contact } from "@/components/Contact";
 
@@ -18,6 +19,7 @@ const Index = () => {
       <HeroSection />
       <TechStack />
       <Projects />
+      <Products />
       <Services />
       <Contact />
       
