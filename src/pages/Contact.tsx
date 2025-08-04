@@ -24,11 +24,7 @@ const ContactPage = () => {
               <Button 
                 variant="ghost" 
                 onClick={() => navigate('/')}
-<<<<<<< HEAD
-                className="hover:text-primary transition-colors"
-=======
                 className="transition-colors"
->>>>>>> 874d716 (Inital commit)
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Back to Home
