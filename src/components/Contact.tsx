@@ -1,10 +1,12 @@
-import { Button } from "./ui/button";
-import { Card } from "./ui/card";
-import { Mail, Phone, Linkedin, ExternalLink, Sparkles } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+"use client"
+
+import { Button } from "./ui/button"
+import { Card } from "./ui/card"
+import { Mail, Phone, Linkedin, ExternalLink, Sparkles } from "lucide-react"
+import { useNavigate } from "react-router-dom"
 
 export const Contact = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   return (
     <section id="contact" className="py-20 bg-background">
@@ -14,8 +16,8 @@ export const Contact = () => {
             Let's Build Something <span className="text-holographic">Amazing</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your ideas into reality? Get in touch and let's create 
-            exceptional digital experiences together.
+            Ready to transform your ideas into reality? Get in touch and let's create exceptional digital experiences
+            together.
           </p>
         </div>
 
@@ -24,14 +26,12 @@ export const Contact = () => {
             {/* Left side - CTA */}
             <div className="space-y-8 animate-fade-in-up">
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-foreground">
-                  Ready to work together?
-                </h3>
-                
+                <h3 className="text-2xl font-bold text-foreground">Ready to work together?</h3>
+
                 <p className="text-muted-foreground leading-relaxed">
-                  Whether you're a startup looking to make a mark or an established business 
-                  seeking digital transformation, we're here to bring your vision to life with 
-                  cutting-edge technology and creative excellence.
+                  Whether you're a startup looking to make a mark or an established business seeking digital
+                  transformation, we're here to bring your vision to life with cutting-edge technology and creative
+                  excellence.
                 </p>
 
                 <div className="space-y-4">
@@ -50,9 +50,9 @@ export const Contact = () => {
                 </div>
               </div>
 
-              <Button 
-                size="lg" 
-                onClick={() => navigate('/contact')}
+              <Button
+                size="lg"
+                onClick={() => navigate("/contact")}
                 className="bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 glow-primary group"
               >
                 <Mail className="mr-2 h-5 w-5 group-hover:animate-float" />
@@ -69,10 +69,7 @@ export const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Phone</h4>
-                    <a 
-                      href="tel:+919116556124" 
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
+                    <a href="tel:+919116556124" className="text-muted-foreground hover:text-primary transition-colors">
                       +91 9116556124
                     </a>
                   </div>
@@ -86,8 +83,8 @@ export const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Email</h4>
-                    <a 
-                      href="mailto:dhawalprajapat421@gmail.com" 
+                    <a
+                      href="mailto:dhawalprajapat421@gmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
                       dhawalprajapat421@gmail.com
@@ -103,8 +100,8 @@ export const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">LinkedIn</h4>
-                    <a 
-                      href="https://www.linkedin.com/in/dhawal-kumar-prajapat-598537238/" 
+                    <a
+                      href="https://www.linkedin.com/in/dhawal-kumar-prajapat-598537238/"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
                       https://www.linkedin.com/in/dhawal-kumar-prajapat-598537238/
@@ -124,20 +121,75 @@ export const Contact = () => {
                       <p className="text-sm text-muted-foreground">Password: Cre8ive@2025</p>
                     </div>
                   </div>
-                  <Button variant="ghost" size="sm" className="hover:text-primary">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                    onClick={() =>
+                      window.open(
+                        "https://www.figma.com/design/KVVuiiFFPoY8CbDgxSEoFF/Portfolio?node-id=0-1&t=mkdXZHqKq6UUWX9w-1",
+                        "_blank",
+                      )
+                    }
+                  >
                     View
                   </Button>
                 </div>
               </Card>
+
+              {/* Additional Portfolio Links */}
+              <div className="mt-8 space-y-4">
+                <h4 className="text-lg font-semibold text-foreground">Design Portfolio</h4>
+
+                <div className="grid gap-4">
+                  <Card className="glass-card hover:glow-border transition-all duration-300 p-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h5 className="font-medium text-foreground">UI/UX Design Collection</h5>
+                        <p className="text-sm text-muted-foreground">Modern interface designs</p>
+                      </div>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="hover:scale-105 transition-all duration-300 bg-transparent"
+                        onClick={() =>
+                          window.open("https://www.figma.com/design/UQaMWsQYTTmLVqkvZOJZY5?node-id=5-133", "_blank")
+                        }
+                      >
+                        <ExternalLink className="h-3 w-3 mr-1" />
+                        View
+                      </Button>
+                    </div>
+                  </Card>
+
+                  <Card className="glass-card hover:glow-border transition-all duration-300 p-4">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h5 className="font-medium text-foreground">Mobile App Designs</h5>
+                        <p className="text-sm text-muted-foreground">Mobile-first design concepts</p>
+                      </div>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="hover:scale-105 transition-all duration-300 bg-transparent"
+                        onClick={() =>
+                          window.open("https://www.figma.com/design/sDcYE1741ZbRQcol9hCc3S?node-id=44-763", "_blank")
+                        }
+                      >
+                        <ExternalLink className="h-3 w-3 mr-1" />
+                        View
+                      </Button>
+                    </div>
+                  </Card>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Bottom section */}
           <div className="mt-16 pt-12 border-t border-border/50 text-center">
             <div className="space-y-4 animate-fade-in-up">
-              <h4 className="text-lg font-semibold text-foreground">
-                Available for new projects
-              </h4>
+              <h4 className="text-lg font-semibold text-foreground">Available for new projects</h4>
               <p className="text-muted-foreground">
                 Currently accepting new client work and exciting project collaborations.
               </p>
@@ -152,5 +204,5 @@ export const Contact = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
