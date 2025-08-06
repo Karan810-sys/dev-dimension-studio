@@ -6,12 +6,19 @@ import hireDriverImage from "@/assets/hire-driver-project.jpg";
 import jainSanghImage from "@/assets/jain-sangh-project.jpg";
 import nagarBazaarImage from "@/assets/nagar-bazaar-project.jpg";
 import filingWorldImage from "@/assets/filing-world-project.jpg";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 
 const allProjects = [
   {
     name: "Hire A Driver",
     description: "Premium ride-sharing platform with real-time tracking, smart matching algorithms, and seamless payment integration. Built for modern urban mobility.",
-    image: hireDriverImage,
+    images: [hireDriverImage, filingWorldImage],
     tech: ["PHP", "jQuery", "MySQL", "Javascript", "Bootstrap"],
     liveLink: "https://d121.vvelocity.com/Hire_a_driver/",
     githubLink: "https://github.com/DhawalPrajapat/Hire-car-driver",
@@ -22,7 +29,7 @@ const allProjects = [
   {
     name: "Jain Sangh App",
     description: "Community management platform for religious organizations with event scheduling, member directory, and spiritual content management system.",
-    image: jainSanghImage,
+    images: [jainSanghImage, hireDriverImage, filingWorldImage],
     tech: ["Flutter", "Laravel", "MySQL", "Firebase", "Payment Gateway"],
     liveLink: "https://play.google.com/store/apps/details?id=app.management.jainsangh",
     githubLink: "#",
@@ -33,7 +40,7 @@ const allProjects = [
   {
     name: "Nagar Bazaar",
     description: "Local marketplace connecting vendors and customers with inventory management, order tracking, and multi-vendor support for small businesses.",
-    image: nagarBazaarImage,
+    images: [nagarBazaarImage, hireDriverImage],
     tech: ["React", "Node.js", "PostgreSQL", "AWS S3", "Razorpay"],
     liveLink: "https://play.google.com/store/apps/details?id=com.webikka.nagarbazaar",
     githubLink: "#",
@@ -44,7 +51,7 @@ const allProjects = [
   {
     name: "FilingWorld",
     description: "Comprehensive legal and tax filing platform with document management, automated workflows, and compliance tracking for businesses.",
-    image: filingWorldImage,
+    images: [filingWorldImage, hireDriverImage],
     tech: ["Laravel", "Vue.js", "MySQL", "RazorPay", "API"],
     liveLink: "https://filingworld.in/sale/",
     githubLink: "https://github.com/Uday14051405/FilingWorld",
@@ -55,7 +62,7 @@ const allProjects = [
   {
     name: "24ItSupport – IT Services & Products Platform",
     description: "Comprehensive IT services and product platform with service booking, enquiry management, secure Razorpay integration, multilingual support, and role-based dashboards for users, admins, and providers.",
-    image: nagarBazaarImage,
+    images: [filingWorldImage, hireDriverImage],
     tech: ["Laravel", "Vue.js", "MySQL", "RazorPay", "API"],
     liveLink: "https://24itsupport.com/",
     githubLink: "https://github.com/Uday14051405/24ITSupport",
@@ -64,9 +71,42 @@ const allProjects = [
     year: "2024"
   },
   {
+    name: "Toy Shop – E-commerce Platform for Toys & Games",
+    description: "Toy e-commerce platform with dynamic product catalog, secure checkout, admin dashboard, payment integration, and mobile-responsive design for seamless toy and game shopping experience.",
+    images: [filingWorldImage, hireDriverImage],
+    tech: ["Laravel", "MySQL", "JavaScript", "HTML/CSS", "Payment Gateway", "Bootstrap"],
+    liveLink: "",
+    githubLink: "https://github.com/timberlin12/Toy-Ecommerce",
+    category: "Web Platform",
+    status: "Devloping",
+    year: "2024"
+  },
+  {
+    name: "CRM System – Real Estate Client & Lead Management",
+    description: "Custom CRM system for real estate lead management with client tracking, property listings, task assignments, communication history, and performance monitoring built using Core PHP.",
+    images: [filingWorldImage, hireDriverImage],
+    tech: [ "Laravel", "Core PHP", "MySQL", "JavaScript", "API Integration"],
+    liveLink: "https://roharealty.com/",
+    githubLink: "",
+    category: "Web Platform and Mobile App",
+    status: "Live",
+    year: "2022"
+  },
+  {
+    name: "M. Gheewala Global HR Consultants",
+    description: "Overseas recruitment platform with dynamic job listings, resume submissions, client inquiries, admin controls, and multilingual support built in Core PHP for global manpower management.",
+    images: [filingWorldImage, hireDriverImage],
+    tech: ["Core PHP", "MySQL", "JavaScript", "HTML/CSS"],
+    liveLink: "https://www.mgheewala.com/",
+    githubLink: "",
+    category: "Web Platform",
+    status: "Live",
+    year: "2023"
+  },
+  {
     name: "Bank Statement Analyzer – Financial Data Interpretation Tool",
     description: "Bank statement analysis tool with automated PDF data extraction, transactional categorization, cash flow insights, and responsive user interface.",
-    image: filingWorldImage,
+    images: [filingWorldImage, hireDriverImage],
     tech: ["Laravel", "MySQL", "JavaScript", "API Integration", "PDF Parser"],
     liveLink: "https://bsa.1flo.in/",
     githubLink: "https://github.com/Uday14051405/Bank-Statement-Analyzer",
@@ -79,6 +119,16 @@ const allProjects = [
 const AllProjects = () => {
   const navigate = useNavigate();
 
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const filteredProjects = selectedCategory === "All"
+    ? allProjects
+    : allProjects.filter(project =>
+        selectedCategory === "UI/UX"
+          ? project.category.toLowerCase().includes("ui") || project.category.toLowerCase().includes("ux")
+          : project.category.toLowerCase().includes(selectedCategory.toLowerCase())
+      );
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -89,7 +139,7 @@ const AllProjects = () => {
               <Button 
                 variant="ghost" 
                 onClick={() => navigate('/')}
-                className="hover:text-primary transition-colors"
+                className="transition-colors hover:text-white dark:hover:text-black"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Back to Home
@@ -106,16 +156,31 @@ const AllProjects = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Section + Filters */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Our <span className="text-holographic">Portfolio</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Explore our complete collection of projects showcasing innovative solutions, 
             cutting-edge technology, and exceptional user experiences across various industries.
           </p>
+
+          {/* Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mt-4">
+            {["All", "Mobile App", "UI/UX", "Website"].map((cat) => (
+              <Button
+                key={cat}
+                variant={selectedCategory === cat ? "default" : "outline"}
+                onClick={() => setSelectedCategory(cat)}
+                className={`glass transition-all duration-300 
+                            ${selectedCategory === cat ? "glow-border" : ""} 
+                            text-black dark:text-white`}>
+                {cat}
+              </Button>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -123,18 +188,33 @@ const AllProjects = () => {
       <section className="py-12 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allProjects.map((project, index) => (
+            {filteredProjects.map((project, index) => (
               <Card
                 key={project.name}
                 className="group glass-card hover:glow-border transition-all duration-500 overflow-hidden transform hover:scale-[1.02] perspective-1000 animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
+                  <Swiper
+                    modules={[Navigation, Pagination, Autoplay]}
+                    navigation
+                    pagination={{ clickable: true }}
+                    autoplay={{
+                      delay: 3000, // auto slide every 3 seconds
+                      disableOnInteraction: false,
+                    }}
+                    className="w-full h-48"
+                  >
+                    {project.images.map((img, i) => (
+                      <SwiperSlide key={i}>
+                        <img
+                          src={img}
+                          alt={`${project.name} ${i + 1}`}
+                          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -182,22 +262,28 @@ const AllProjects = () => {
                   </div>
 
                   <div className="flex gap-3 pt-2">
-                    <Button 
-                      size="sm" 
-                      variant="outline"
-                      className="glass hover:glow-border transition-all duration-300 flex-1"
-                    >
-                      <ExternalLink className="h-3 w-3 mr-1" />
-                      Live Demo
-                    </Button>
-                    <Button 
-                      size="sm" 
-                      variant="ghost"
-                      className="hover:text-primary transition-colors flex-1"
-                    >
-                      <Github className="h-3 w-3 mr-1" />
-                      Code
-                    </Button>
+                    {project.liveLink && (
+                      <Button 
+                        size="sm" 
+                        variant="outline"
+                        className="glass hover:glow-border transition-all duration-300 flex-1"
+                        onClick={() => window.open(project.liveLink, "_blank")}
+                      >
+                        <ExternalLink className="h-3 w-3 mr-1" />
+                        Live Demo
+                      </Button>
+                    )}
+                    {project.githubLink && (
+                      <Button 
+                        size="sm" 
+                        variant="ghost"
+                        className="hover:text-primary transition-colors flex-1"
+                        onClick={() => window.open(project.githubLink, "_blank")}
+                      >
+                        <Github className="h-3 w-3 mr-1" />
+                        Code
+                      </Button>
+                    )}
                   </div>
                 </div>
               </Card>

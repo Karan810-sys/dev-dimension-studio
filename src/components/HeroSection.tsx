@@ -73,23 +73,25 @@ export const HeroSection = () => {
               <Button 
                 variant="ghost" 
                 size="icon" 
-                className="hover:text-primary transition-colors"
+                className="transition-colors hover:text-white dark:hover:text-black"
                 onClick={() => window.open('https://github.com/DhawalPrajapat', '_blank')}
               >
                 <Github className="h-5 w-5" />
               </Button>
+              
               <Button 
                 variant="ghost" 
                 size="icon" 
-                className="hover:text-primary transition-colors"
+                className="transition-colors hover:text-white dark:hover:text-black"
                 onClick={() => window.open('https://www.linkedin.com/in/dhawal-kumar-prajapat-598537238/', '_blank')}
               >
                 <Linkedin className="h-5 w-5" />
               </Button>
+              
               <Button 
                 variant="ghost" 
                 size="icon" 
-                className="hover:text-primary transition-colors"
+                className="transition-colors hover:text-white dark:hover:text-black"
                 onClick={() => navigate('/contact')}
               >
                 <Mail className="h-5 w-5" />
@@ -107,7 +109,7 @@ export const HeroSection = () => {
             </div>
             
             <div className="absolute bottom-20 right-8 glass-card p-3 rounded-lg animate-float" style={{ animationDelay: '1s' }}>
-              <code className="text-sm font-mono text-primary">Three.js</code>
+              <code className="text-sm font-mono text-primary">Laravel</code>
             </div>
             
             <div className="absolute top-1/2 left-0 glass-card p-3 rounded-lg animate-float" style={{ animationDelay: '2s' }}>

@@ -53,12 +53,12 @@ export const HeroOrb = () => {
         {/* Floating code fragments */}
         <div className="absolute inset-0">
           {[
-            { text: "React", pos: "top-4 left-4", delay: "0s" },
-            { text: "Node.js", pos: "top-8 right-2", delay: "0.5s" },
-            { text: "Three.js", pos: "bottom-6 left-2", delay: "1s" },
+            { text: "Flutter", pos: "top-4 left-4", delay: "0s" },
+            { text: "Vue.js", pos: "top-8 right-2", delay: "0.5s" },
+            { text: "Core PHP", pos: "bottom-6 left-2", delay: "1s" },
             { text: "AWS", pos: "bottom-4 right-6", delay: "1.5s" },
-            { text: "API", pos: "top-1/2 left-0", delay: "2s" },
-            { text: "UI/UX", pos: "top-1/2 right-0", delay: "2.5s" }
+            { text: "Wordpress", pos: "top-1/2 left-0", delay: "2s" },
+            { text: "Tailwind CSS", pos: "top-1/2 right-0", delay: "2.5s" }
           ].map((item, i) => (
             <div
               key={i}
