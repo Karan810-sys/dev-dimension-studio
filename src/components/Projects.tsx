@@ -4,6 +4,12 @@ import { Card } from "./ui/card"
 import { Button } from "./ui/button"
 import { ExternalLink, Github } from "lucide-react"
 import { useNavigate } from "react-router-dom"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination, Autoplay } from "swiper/modules"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+
 import hireDriverImage from "@/assets/hire-driver-project.jpg"
 import jainSanghImage from "@/assets/jain-sangh-project.jpg"
 import nagarBazaarImage from "@/assets/nagar-bazaar-project.jpg"
@@ -11,76 +17,83 @@ import filingWorldImage from "@/assets/filing-world-project.jpg"
 
 const projects = [
   {
-    name: "24ItSupport – IT Services & Products Platform",
-    description:
-      "Full-featured IT services platform with secure Razorpay integration, role-based dashboards, multilingual support, and comprehensive admin panel for managing bookings and services.",
-    image: filingWorldImage,
-    tech: ["Laravel", "MySQL", "JavaScript", "RazorPay", "HTML/CSS"],
-    liveLink: "https://24itsupport.com/",
-    githubLink: "https://github.com/Uday14051405/24ITSupport",
-    category: "Web Platform",
-    status: "Live",
-    year: "2024",
-  },
-  {
-    name: "Hire A Driver – Online Driver Booking Platform",
-    description:
-      "Web-based platform for booking professional drivers with user-friendly interface, booking management, and role-based access for customers and administrators.",
-    image: hireDriverImage,
-    tech: ["Core PHP", "MySQL", "JavaScript", "HTML/CSS", "Bootstrap"],
+    name: "Hire A Driver",
+    description: "Premium ride-sharing platform with real-time tracking, smart matching algorithms, and seamless payment integration. Built for modern urban mobility.",
+    images: ['/src/assets/projects/HireDriver1.png', '/src/assets/projects/HireDriver2.png', '/src/assets/projects/HireDriver3.png', '/src/assets/projects/HireDriver4.png'],
+    tech: ["PHP", "jQuery", "MySQL", "Node.js", "React"],
     liveLink: "https://d121.vvelocity.com/Hire_a_driver/",
     githubLink: "https://github.com/DhawalPrajapat/Hire-car-driver",
-    category: "Web Platform",
+    category: "Website",
     status: "Live",
-    year: "2024",
+    year: "2024"
   },
   {
-    name: "FilingWorld – Digital Compliance & Filing Platform",
-    description:
-      "India's leading platform for legal, tax, and business compliance services with 100+ integrated services, role-based dashboards, and automated filing processes.",
-    image: filingWorldImage,
-    tech: ["Laravel", "Vue.js", "MySQL", "JavaScript", "HTML/CSS"],
-    liveLink: "https://filingworld.in/sale/",
-    githubLink: "https://github.com/Uday14051405/FilingWorld",
-    category: "Web Platform",
-    status: "Live",
-    year: "2024",
-  },
-  {
-    name: "Jain Sangh Community App",
-    description:
-      "Mobile application connecting the Jain community with notice board, donation requests, event participation, and seamless community management features.",
-    image: jainSanghImage,
+    name: "Jain Sangh App",
+    description: "Community management platform for religious organizations with event scheduling, member directory, and spiritual content management system.",
+    images: ['/src/assets/projects/JainSangh1.jpg'],
     tech: ["Flutter", "Laravel", "MySQL", "Firebase", "Payment Gateway"],
     liveLink: "https://play.google.com/store/apps/details?id=app.management.jainsangh",
     githubLink: "#",
     category: "Mobile App",
     status: "Live",
-    year: "2024",
+    year: "2024"
+  },
+  {
+    name: "Fastag – Figma UI design",
+    description: "Design for a digital toll payment and vehicle management system featuring user-friendly dashboard, vehicle linking screens, wallet recharge flow, transaction history, KYC process, and mobile-responsive layouts for seamless toll management experience.",
+    images: ['/src/assets/projects/Fastag1.png', '/src/assets/projects/Fastag2.png', '/src/assets/projects/Fastag3.png', '/src/assets/projects/Fastag4.png', '/src/assets/projects/Fastag5.png', '/src/assets/projects/Fastag6.png',],
+    tech: ["Figma", "UI/UX"],
+    liveLink: "https://www.figma.com/design/UQaMWsQYTTmLVqkvZOJZY5/Fastag?node-id=5-133&p=f",
+    githubLink: "",
+    category: "UI/UX",
+    status: "",
+    year: "2025"
+  },
+  {
+    name: "Spot On Tech – IT Support & Technology Management",
+    description:
+      "Comprehensive IT support platform that streamlines technology management for businesses, reducing downtime and improving operational efficiency. Provides a single point of contact for handling tech issues, vendor coordination, and problem resolution to keep business operations running smoothly.",
+    images: [
+      "/src/assets/projects/SpotOnTech1.png",
+      "/src/assets/projects/SpotOnTech2.png",
+      "/src/assets/projects/SpotOnTech3.png",
+      "/src/assets/projects/SpotOnTech4.png"
+    ],
+    tech: ["WordPress", "PHP", "JavaScript", "HTML/CSS", "Responsive Design"],
+    liveLink: "https://spotontech.com/",
+    githubLink: "",
+    category: "Website",
+    status: "Live",
+    year: "2025"
   },
   {
     name: "Nagar Bazaar – Furniture E-commerce",
-    description:
-      "E-commerce mobile app for furniture shopping with category filtering, detailed product views, secure cart system, and reliable delivery management.",
-    image: nagarBazaarImage,
-    tech: ["Flutter", "Laravel", "MySQL", "Payment Gateway", "API"],
+    description: "Local marketplace connecting vendors and customers with inventory management, order tracking, and multi-vendor support for small businesses.",
+    images: ['/src/assets/projects/NagarBazaar1.jpg', '/src/assets/projects/NagarBazaar2.jpg', '/src/assets/projects/NagarBazaar3.jpg', '/src/assets/projects/NagarBazaar4.jpg', '/src/assets/projects/NagarBazaar5.jpg',],
+    tech: ["React", "Node.js", "PostgreSQL", "AWS S3", "Razorpay"],
     liveLink: "https://play.google.com/store/apps/details?id=com.webikka.nagarbazaar",
     githubLink: "#",
     category: "Mobile App",
     status: "Live",
-    year: "2024",
+    year: "2024"
   },
   {
-    name: "Bank Statement Analyzer – Financial Tool",
+    name: "TeacherBuilder – Online Teacher Certification Platform",
     description:
-      "Laravel-based financial data interpretation tool with PDF parsing, API integration, transactional categorization, and comprehensive cash flow analysis.",
-    image: filingWorldImage,
-    tech: ["Laravel", "MySQL", "JavaScript", "API Integration", "PDF Parser"],
-    liveLink: "https://bsa.1flo.in/",
-    githubLink: "https://github.com/Uday14051405/Bank-Statement-Analyzer",
-    category: "Web Platform",
+      "Accredited online platform for Texas alternative teacher certification with step-by-step onboarding, flexible online coursework, TExES exam preparation, and first-year teaching support to help aspiring educators achieve certification efficiently.",
+    images: [
+      "/src/assets/projects/TeacherBuilder1.png",
+      "/src/assets/projects/TeacherBuilder2.png",
+      "/src/assets/projects/TeacherBuilder3.png",
+      "/src/assets/projects/TeacherBuilder4.png",
+      "/src/assets/projects/TeacherBuilder5.png"
+    ],
+    tech: ["React", "Node.js", "PHP", "MySQL", "JavaScript"],
+    liveLink: "https://www.teacherbuilder.com/",
+    githubLink: "",
+    category: "Website",
     status: "Live",
-    year: "2024",
+    year: "2025"
   },
 ]
 
@@ -108,30 +121,56 @@ export const Projects = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative overflow-hidden">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.name}
-                  className="w-full h-48 object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-                />
+                {/* Swiper Slider */}
+                <Swiper
+                  modules={[Navigation, Pagination, Autoplay]}
+                  navigation
+                  pagination={{ clickable: true }}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }}
+                  className="w-full h-48"
+                >
+                  {project.images.map((img, i) => (
+                    <SwiperSlide key={i}>
+                      <div className="relative w-full h-48 overflow-hidden">
+                        {/* Blurred background */}
+                        <img
+                          src={img}
+                          alt="background-blur"
+                          className="absolute inset-0 w-full h-full object-cover filter blur-md scale-110"
+                        />
+                        {/* Clear centered image */}
+                        <img
+                          src={img}
+                          alt={`${project.name} ${i + 1}`}
+                          className="relative z-10 h-full mx-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
 
                 {/* Status Badge */}
-                <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <span className="bg-green-500/20 text-green-400 border border-green-500/30 text-xs px-3 py-1 rounded-full font-medium backdrop-blur-sm">
                     {project.status || "Live"}
                   </span>
                 </div>
 
                 {/* Category Badge */}
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
                   <span className="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full font-medium border border-primary/30 backdrop-blur-sm">
                     {project.category}
                   </span>
                 </div>
 
-                {/* Hover Overlay with Quick Actions */}
+                {/* Quick Actions */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <div className="flex gap-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <div className="flex gap-3">
                     <Button
                       size="sm"
                       className="bg-primary/90 hover:bg-primary text-primary-foreground backdrop-blur-sm border border-primary/30"
@@ -139,15 +178,6 @@ export const Projects = () => {
                     >
                       <ExternalLink className="h-3 w-3 mr-1" />
                       View Live
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="bg-background/90 hover:bg-background border-border/50 backdrop-blur-sm"
-                      onClick={() => window.open(project.githubLink, "_blank")}
-                    >
-                      <Github className="h-3 w-3 mr-1" />
-                      Code
                     </Button>
                   </div>
                 </div>
@@ -158,7 +188,7 @@ export const Projects = () => {
                   <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-2 line-clamp-2">
                     {project.name}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 group-hover:text-muted-foreground/80 transition-colors">
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
                     {project.description}
                   </p>
                 </div>
@@ -168,32 +198,24 @@ export const Projects = () => {
                     <span
                       key={tech}
                       className="text-xs bg-secondary/50 text-secondary-foreground px-2 py-1 rounded-md font-mono border border-border/50 hover:bg-secondary/70 hover:border-primary/30 transition-all duration-300 cursor-default"
-                      style={{ animationDelay: `${techIndex * 0.1}s` }}
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex gap-3 pt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="glass hover:glow-border transition-all duration-300 flex-1 hover:scale-105 bg-transparent"
-                    onClick={() => window.open(project.liveLink, "_blank")}
-                  >
-                    <ExternalLink className="h-3 w-3 mr-1" />
-                    Live Demo
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    className="hover:text-primary transition-colors flex-1 hover:bg-primary/10"
-                    onClick={() => window.open(project.githubLink, "_blank")}
-                  >
-                    <Github className="h-3 w-3 mr-1" />
-                    Code
-                  </Button>
+                <div className="flex gap-3 pt-2">
+                  {project.liveLink && (
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="glass hover:glow-border transition-all duration-300 flex-1"
+                      onClick={() => window.open(project.liveLink, "_blank")}
+                    >
+                      <ExternalLink className="h-3 w-3 mr-1" />
+                      Live Demo
+                    </Button>
+                  )}
                 </div>
               </div>
             </Card>

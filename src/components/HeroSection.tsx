@@ -32,19 +32,18 @@ export const HeroSection = () => {
             <div className="space-y-4">
               <div className="inline-block">
                 <span className="text-sm font-mono text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
-                  Full Stack Development
+                  Creative Digital Solutions
                 </span>
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                <span className="text-holographic">Creative</span>{" "}
-                <br />
-                <span className="text-foreground">Dev Team</span>
+                {/* <span className="text-holographic">Creative</span>{" "}
+                <br /> */}
+                <span className="text-foreground">We Build. We Design. We Innovate.</span>
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                We craft premium web and mobile experiences with cutting-edge 3D technology, 
-                modern UI/UX design, and robust full-stack solutions.
+                Websites, mobile apps, and UI/UX designs crafted to connect with your audience and stand out in the digital world.
               </p>
             </div>
 

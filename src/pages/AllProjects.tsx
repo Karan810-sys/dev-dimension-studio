@@ -2,10 +2,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink, Github, Filter } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import hireDriverImage from "@/assets/hire-driver-project.jpg";
-import jainSanghImage from "@/assets/jain-sangh-project.jpg";
-import nagarBazaarImage from "@/assets/nagar-bazaar-project.jpg";
-import filingWorldImage from "@/assets/filing-world-project.jpg";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
@@ -18,8 +14,8 @@ const allProjects = [
   {
     name: "Hire A Driver",
     description: "Premium ride-sharing platform with real-time tracking, smart matching algorithms, and seamless payment integration. Built for modern urban mobility.",
-    images: [hireDriverImage, filingWorldImage],
-    tech: ["PHP", "jQuery", "MySQL", "Javascript", "Bootstrap"],
+    images: ['/src/assets/projects/HireDriver1.png', '/src/assets/projects/HireDriver2.png', '/src/assets/projects/HireDriver3.png', '/src/assets/projects/HireDriver4.png'],
+    tech: ["PHP", "jQuery", "MySQL", "Node.js", "React"],
     liveLink: "https://d121.vvelocity.com/Hire_a_driver/",
     githubLink: "https://github.com/DhawalPrajapat/Hire-car-driver",
     category: "Website",
@@ -29,7 +25,7 @@ const allProjects = [
   {
     name: "Jain Sangh App",
     description: "Community management platform for religious organizations with event scheduling, member directory, and spiritual content management system.",
-    images: [jainSanghImage, hireDriverImage, filingWorldImage],
+    images: ['/src/assets/projects/JainSangh1.jpg'],
     tech: ["Flutter", "Laravel", "MySQL", "Firebase", "Payment Gateway"],
     liveLink: "https://play.google.com/store/apps/details?id=app.management.jainsangh",
     githubLink: "#",
@@ -38,81 +34,116 @@ const allProjects = [
     year: "2024"
   },
   {
-    name: "Nagar Bazaar",
+    name: "TeacherBuilder – Online Teacher Certification Platform",
+    description:
+      "Accredited online platform for Texas alternative teacher certification with step-by-step onboarding, flexible online coursework, TExES exam preparation, and first-year teaching support to help aspiring educators achieve certification efficiently.",
+    images: [
+      "/src/assets/projects/TeacherBuilder1.png",
+      "/src/assets/projects/TeacherBuilder2.png",
+      "/src/assets/projects/TeacherBuilder3.png",
+      "/src/assets/projects/TeacherBuilder4.png",
+      "/src/assets/projects/TeacherBuilder5.png"
+    ],
+    tech: ["React", "Node.js", "PHP", "MySQL", "JavaScript"],
+    liveLink: "https://www.teacherbuilder.com/",
+    githubLink: "",
+    category: "Website",
+    status: "Live",
+    year: "2025"
+  },
+  {
+    name: "Nagar Bazaar – Furniture E-commerce",
     description: "Local marketplace connecting vendors and customers with inventory management, order tracking, and multi-vendor support for small businesses.",
-    images: [nagarBazaarImage, hireDriverImage],
+    images: ['/src/assets/projects/NagarBazaar1.jpg', '/src/assets/projects/NagarBazaar2.jpg', '/src/assets/projects/NagarBazaar3.jpg', '/src/assets/projects/NagarBazaar4.jpg', '/src/assets/projects/NagarBazaar5.jpg',],
     tech: ["React", "Node.js", "PostgreSQL", "AWS S3", "Razorpay"],
     liveLink: "https://play.google.com/store/apps/details?id=com.webikka.nagarbazaar",
     githubLink: "#",
-    category: "Web Platform",
+    category: "Mobile App",
     status: "Live",
     year: "2024"
   },
   {
-    name: "FilingWorld",
-    description: "Comprehensive legal and tax filing platform with document management, automated workflows, and compliance tracking for businesses.",
-    images: [filingWorldImage, hireDriverImage],
-    tech: ["Laravel", "Vue.js", "MySQL", "RazorPay", "API"],
-    liveLink: "https://filingworld.in/sale/",
-    githubLink: "https://github.com/Uday14051405/FilingWorld",
-    category: "Web Platform & Mobile App",
+    name: "Spot On Tech – IT Support & Technology Management",
+    description:
+      "Comprehensive IT support platform that streamlines technology management for businesses, reducing downtime and improving operational efficiency. Provides a single point of contact for handling tech issues, vendor coordination, and problem resolution to keep business operations running smoothly.",
+    images: [
+      "/src/assets/projects/SpotOnTech1.png",
+      "/src/assets/projects/SpotOnTech2.png",
+      "/src/assets/projects/SpotOnTech3.png",
+      "/src/assets/projects/SpotOnTech4.png"
+    ],
+    tech: ["WordPress", "PHP", "JavaScript", "HTML/CSS", "Responsive Design"],
+    liveLink: "https://spotontech.com/",
+    githubLink: "",
+    category: "Website",
     status: "Live",
     year: "2025"
   },
   {
     name: "24ItSupport – IT Services & Products Platform",
     description: "Comprehensive IT services and product platform with service booking, enquiry management, secure Razorpay integration, multilingual support, and role-based dashboards for users, admins, and providers.",
-    images: [filingWorldImage, hireDriverImage],
+    images: ['/src/assets/projects/24ItSupport1.png', '/src/assets/projects/24ItSupport5.jpg', '/src/assets/projects/24ItSupport2.png', '/src/assets/projects/24ItSupport6.jpg', '/src/assets/projects/24ItSupport3.png', '/src/assets/projects/24ItSupport4.png', '/src/assets/projects/24ItSupport7.jpg', '/src/assets/projects/24ItSupport8.jpg',],
     tech: ["Laravel", "Vue.js", "MySQL", "RazorPay", "API"],
     liveLink: "https://24itsupport.com/",
-    githubLink: "https://github.com/Uday14051405/24ITSupport",
-    category: "Web Platform & Mobile App",
+    githubLink: "",
+    category: "Website & Mobile App",
     status: "Development",
     year: "2024"
   },
   {
+    name: "Multi-Industry UI Design Collection",
+    description: "A diverse collection of Figma UI designs across industries including eldercare, fashion e-commerce, SEO tools, pet tracking, automotive toll systems, and industrial manufacturing. Each design features user-centric layouts, responsive structures, and tailored flows—ranging from product catalogs and dashboards to real-time tracking and healthcare interfaces—demonstrating versatility in creating functional and visually appealing digital experiences.",
+    images: ['/src/assets/projects/FootGlider1.png', '/src/assets/projects/Kyndmark1.png', '/src/assets/projects/RankIt1.png', '/src/assets/projects/UnitedRubber1.png', '/src/assets/projects/Welldercare1.png', '/src/assets/projects/FootGlider3.png', '/src/assets/projects/Kyndmark4.png', '/src/assets/projects/RankIt4.png', '/src/assets/projects/UnitedRubber6.png', '/src/assets/projects/Welldercare4.png'],
+    tech: ["Figma", "UI/UX", "Figma Password: Cre8ive@2025"],
+    liveLink: "https://www.figma.com/design/KVVuiiFFPoY8CbDgxSEoFF/Portfolio?node-id=0-1&t=mkdXZHqKq6UUWX9w-1",
+    githubLink: "",
+    category: "UI/UX",
+    status: "",
+    year: "2025"
+  },
+  {
     name: "Toy Shop – E-commerce Platform for Toys & Games",
     description: "Toy e-commerce platform with dynamic product catalog, secure checkout, admin dashboard, payment integration, and mobile-responsive design for seamless toy and game shopping experience.",
-    images: [filingWorldImage, hireDriverImage],
-    tech: ["Laravel", "MySQL", "JavaScript", "HTML/CSS", "Payment Gateway", "Bootstrap"],
+    images: ['/src/assets/projects/ToyEcom1.png', '/src/assets/projects/ToyEcom2.png', '/src/assets/projects/ToyEcom3.png', '/src/assets/projects/ToyEcom4.png', '/src/assets/projects/ToyEcom5.png', '/src/assets/projects/ToyEcom6.png',],
+    tech: ["Laravel", "MySQL", "JavaScript", "HTML/CSS", "Payment Gateway", "Bootstrap", "React"],
     liveLink: "",
     githubLink: "https://github.com/timberlin12/Toy-Ecommerce",
-    category: "Web Platform",
+    category: "Website",
     status: "Devloping",
     year: "2024"
   },
   {
+    name: "Pet Tracker – Figma UI design",
+    description: "Design for a smart pet monitoring app featuring real-time location tracking, activity monitoring dashboard, health record screens, reminder system, and mobile-responsive design to ensure pet safety and well-being.",
+    images: ['/src/assets/projects/PetTracker1.png', '/src/assets/projects/PetTracker2.png', '/src/assets/projects/PetTracker3.png', '/src/assets/projects/PetTracker4.png', '/src/assets/projects/PetTracker5.png', '/src/assets/projects/PetTracker6.png'],
+    tech: [ "Figma", "UI/UX"],
+    liveLink: "https://www.figma.com/design/sDcYE1741ZbRQcol9hCc3S/PETPAL?node-id=44-763&p=f",
+    githubLink: "",
+    category: "UI/UX",
+    status: "",
+    year: "2025"
+  },
+  {
     name: "CRM System – Real Estate Client & Lead Management",
     description: "Custom CRM system for real estate lead management with client tracking, property listings, task assignments, communication history, and performance monitoring built using Core PHP.",
-    images: [filingWorldImage, hireDriverImage],
+    images: ['/src/assets/projects/CRM1.png', '/src/assets/projects/CRM2.png', '/src/assets/projects/CRM3.jpg', '/src/assets/projects/CRM4.jpg',],
     tech: [ "Laravel", "Core PHP", "MySQL", "JavaScript", "API Integration"],
     liveLink: "https://roharealty.com/",
     githubLink: "",
-    category: "Web Platform and Mobile App",
+    category: "Website and Mobile App",
     status: "Live",
     year: "2022"
   },
   {
-    name: "M. Gheewala Global HR Consultants",
-    description: "Overseas recruitment platform with dynamic job listings, resume submissions, client inquiries, admin controls, and multilingual support built in Core PHP for global manpower management.",
-    images: [filingWorldImage, hireDriverImage],
-    tech: ["Core PHP", "MySQL", "JavaScript", "HTML/CSS"],
-    liveLink: "https://www.mgheewala.com/",
+    name: "Fastag – Figma UI design",
+    description: "Design for a digital toll payment and vehicle management system featuring user-friendly dashboard, vehicle linking screens, wallet recharge flow, transaction history, KYC process, and mobile-responsive layouts for seamless toll management experience.",
+    images: ['/src/assets/projects/Fastag1.png', '/src/assets/projects/Fastag2.png', '/src/assets/projects/Fastag3.png', '/src/assets/projects/Fastag4.png', '/src/assets/projects/Fastag5.png', '/src/assets/projects/Fastag6.png',],
+    tech: ["Figma", "UI/UX"],
+    liveLink: "https://www.figma.com/design/UQaMWsQYTTmLVqkvZOJZY5/Fastag?node-id=5-133&p=f",
     githubLink: "",
-    category: "Web Platform",
-    status: "Live",
-    year: "2023"
-  },
-  {
-    name: "Bank Statement Analyzer – Financial Data Interpretation Tool",
-    description: "Bank statement analysis tool with automated PDF data extraction, transactional categorization, cash flow insights, and responsive user interface.",
-    images: [filingWorldImage, hireDriverImage],
-    tech: ["Laravel", "MySQL", "JavaScript", "API Integration", "PDF Parser"],
-    liveLink: "https://bsa.1flo.in/",
-    githubLink: "https://github.com/Uday14051405/Bank-Statement-Analyzer",
-    category: "Web Platform",
-    status: "Live",
-    year: "2024"
+    category: "UI/UX",
+    status: "",
+    year: "2025"
   }
 ];
 
@@ -207,11 +238,21 @@ const AllProjects = () => {
                   >
                     {project.images.map((img, i) => (
                       <SwiperSlide key={i}>
-                        <img
-                          src={img}
-                          alt={`${project.name} ${i + 1}`}
-                          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
+                        <div className="relative w-full h-48 overflow-hidden">
+                          {/* Blurred background image */}
+                          <img
+                            src={img}
+                            alt="background-blur"
+                            className="absolute inset-0 w-full h-full object-cover filter blur-md scale-110"
+                          />
+
+                          {/* Centered clear image */}
+                          <img
+                            src={img}
+                            alt={`${project.name} ${i + 1}`}
+                            className="relative z-10 h-full mx-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
                       </SwiperSlide>
                     ))}
                   </Swiper>
@@ -273,7 +314,7 @@ const AllProjects = () => {
                         Live Demo
                       </Button>
                     )}
-                    {project.githubLink && (
+                    {/* project.githubLink && (
                       <Button 
                         size="sm" 
                         variant="ghost"
@@ -283,7 +324,7 @@ const AllProjects = () => {
                         <Github className="h-3 w-3 mr-1" />
                         Code
                       </Button>
-                    )}
+                    )*/}
                   </div>
                 </div>
               </Card>
