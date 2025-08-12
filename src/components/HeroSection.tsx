@@ -57,18 +57,18 @@ export const HeroSection = () => {
                 <ArrowDown className="ml-2 h-4 w-4" />
               </Button>
               
-              <Button 
+              {/* <Button 
                 variant="outline" 
                 size="lg"
                 onClick={() => navigate('/contact')}
                 className="glass-card hover:glow-border transition-all duration-300"
               >
                 Get In Touch
-              </Button>
+              </Button> */}
             </div>
 
             {/* Social links */}
-            <div className="flex gap-4 pt-4">
+            {/* <div className="flex gap-4 pt-4">
               <Button 
                 variant="ghost" 
                 size="icon" 
@@ -79,7 +79,7 @@ export const HeroSection = () => {
               </Button>
               
               <Button 
-                variant="ghost" 
+                variant="ghost"   
                 size="icon" 
                 className="transition-colors hover:text-white dark:hover:text-black"
                 onClick={() => window.open('https://www.linkedin.com/in/dhawal-kumar-prajapat-598537238/', '_blank')}
@@ -95,7 +95,7 @@ export const HeroSection = () => {
               >
                 <Mail className="h-5 w-5" />
               </Button>
-            </div>
+            </div> */}
           </div>
 
           {/* Right side - 3D Orb */}

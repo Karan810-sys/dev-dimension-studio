@@ -32,7 +32,7 @@ const Index = () => {
               <p className="text-sm text-muted-foreground">Premium Web & Mobile Development</p>
             </div>
             <div className="text-sm text-muted-foreground">
-              © 2024 Creative Dev Team. All rights reserved.
+              © 2025 Creative Dev Team. All rights reserved.
             </div>
           </div>
         </div>

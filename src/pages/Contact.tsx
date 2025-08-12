@@ -114,7 +114,7 @@ const ContactPage = () => {
                       <option value="mobile">Mobile App</option>
                       <option value="fullstack">Full Stack Solution</option>
                       <option value="uiux">UI/UX Design</option>
-                      <option value="consulting">Consulting</option>
+                      {/* <option value="consulting">Consulting</option> */}
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -196,7 +196,7 @@ const ContactPage = () => {
                     </div>
                   </Card>
 
-                  <Card className="glass-card hover:glow-border transition-all duration-300 p-6">
+                  {/* <Card className="glass-card hover:glow-border transition-all duration-300 p-6">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
                         <div className="p-3 bg-primary/10 rounded-lg">
@@ -211,7 +211,7 @@ const ContactPage = () => {
                         View
                       </Button>
                     </div>
-                  </Card>
+                  </Card> */}
                 </div>
 
                 {/* Why Choose Us */}

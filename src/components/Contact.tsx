@@ -50,14 +50,14 @@ export const Contact = () => {
                 </div>
               </div>
 
-              <Button
+              {/* <Button
                 size="lg"
                 onClick={() => navigate("/contact")}
                 className="bg-gradient-to-r from-primary to-primary-glow hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 glow-primary group"
               >
                 <Mail className="mr-2 h-5 w-5 group-hover:animate-float" />
                 Let's Work Together
-              </Button>
+              </Button> */}
             </div>
 
             {/* Right side - Contact cards */}
@@ -110,7 +110,7 @@ export const Contact = () => {
                 </div>
               </Card>
 
-              <Card className="glass-card hover:glow-border transition-all duration-300 p-6">
+              {/* <Card className="glass-card hover:glow-border transition-all duration-300 p-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     <div className="p-3 bg-primary/10 rounded-lg">
@@ -135,10 +135,10 @@ export const Contact = () => {
                     View
                   </Button>
                 </div>
-              </Card>
+              </Card> */}
 
               {/* Additional Portfolio Links */}
-              <div className="mt-8 space-y-4">
+              {/* <div className="mt-8 space-y-4">
                 <h4 className="text-lg font-semibold text-foreground">Design Portfolio</h4>
 
                 <div className="grid gap-4">
@@ -182,7 +182,7 @@ export const Contact = () => {
                     </div>
                   </Card>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
