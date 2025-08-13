@@ -37,9 +37,9 @@ export const HeroSection = () => {
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                {/* <span className="text-holographic">Creative</span>{" "}
-                <br /> */}
-                <span className="text-foreground">We Build. We Design. We Innovate.</span>
+              <span className="text-holographic">Creative</span>{" "}
+                <br />
+                <span className="text-foreground">Dev Team</span>
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
