@@ -9,12 +9,82 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+// Import all images
+import HireDriver1 from '/src/assets/projects/HireDriver1.png';
+import HireDriver2 from '/src/assets/projects/HireDriver2.png';
+import HireDriver3 from '/src/assets/projects/HireDriver3.png';
+import HireDriver4 from '/src/assets/projects/HireDriver4.png';
+
+import JainSangh1 from '/src/assets/projects/JainSangh1.jpg';
+
+import TeacherBuilder1 from '/src/assets/projects/TeacherBuilder1.png';
+import TeacherBuilder2 from '/src/assets/projects/TeacherBuilder2.png';
+import TeacherBuilder3 from '/src/assets/projects/TeacherBuilder3.png';
+import TeacherBuilder4 from '/src/assets/projects/TeacherBuilder4.png';
+import TeacherBuilder5 from '/src/assets/projects/TeacherBuilder5.png';
+
+import NagarBazaar1 from '/src/assets/projects/NagarBazaar1.jpg';
+import NagarBazaar2 from '/src/assets/projects/NagarBazaar2.jpg';
+import NagarBazaar3 from '/src/assets/projects/NagarBazaar3.jpg';
+import NagarBazaar4 from '/src/assets/projects/NagarBazaar4.jpg';
+import NagarBazaar5 from '/src/assets/projects/NagarBazaar5.jpg';
+
+import SpotOnTech1 from '/src/assets/projects/SpotOnTech1.png';
+import SpotOnTech2 from '/src/assets/projects/SpotOnTech2.png';
+import SpotOnTech3 from '/src/assets/projects/SpotOnTech3.png';
+import SpotOnTech4 from '/src/assets/projects/SpotOnTech4.png';
+
+import Support1 from '/src/assets/projects/24ItSupport1.png';
+import Support2 from '/src/assets/projects/24ItSupport2.png';
+import Support3 from '/src/assets/projects/24ItSupport3.png';
+import Support4 from '/src/assets/projects/24ItSupport4.png';
+import Support5 from '/src/assets/projects/24ItSupport5.jpg';
+import Support6 from '/src/assets/projects/24ItSupport6.jpg';
+import Support7 from '/src/assets/projects/24ItSupport7.jpg';
+import Support8 from '/src/assets/projects/24ItSupport8.jpg';
+
+import FootGlider1 from '/src/assets/projects/FootGlider1.png';
+import FootGlider3 from '/src/assets/projects/FootGlider3.png';
+import Kyndmark1 from '/src/assets/projects/Kyndmark1.png';
+import Kyndmark4 from '/src/assets/projects/Kyndmark4.png';
+import RankIt1 from '/src/assets/projects/RankIt1.png';
+import RankIt4 from '/src/assets/projects/RankIt4.png';
+import UnitedRubber1 from '/src/assets/projects/UnitedRubber1.png';
+import UnitedRubber6 from '/src/assets/projects/UnitedRubber6.png';
+import Welldercare1 from '/src/assets/projects/Welldercare1.png';
+import Welldercare4 from '/src/assets/projects/Welldercare4.png';
+
+import ToyEcom1 from '/src/assets/projects/ToyEcom1.png';
+import ToyEcom2 from '/src/assets/projects/ToyEcom2.png';
+import ToyEcom3 from '/src/assets/projects/ToyEcom3.png';
+import ToyEcom4 from '/src/assets/projects/ToyEcom4.png';
+import ToyEcom5 from '/src/assets/projects/ToyEcom5.png';
+import ToyEcom6 from '/src/assets/projects/ToyEcom6.png';
+
+import PetTracker1 from '/src/assets/projects/PetTracker1.png';
+import PetTracker2 from '/src/assets/projects/PetTracker2.png';
+import PetTracker3 from '/src/assets/projects/PetTracker3.png';
+import PetTracker4 from '/src/assets/projects/PetTracker4.png';
+import PetTracker5 from '/src/assets/projects/PetTracker5.png';
+import PetTracker6 from '/src/assets/projects/PetTracker6.png';
+
+import CRM1 from '/src/assets/projects/CRM1.png';
+import CRM2 from '/src/assets/projects/CRM2.png';
+import CRM3 from '/src/assets/projects/CRM3.jpg';
+import CRM4 from '/src/assets/projects/CRM4.jpg';
+
+import Fastag1 from '/src/assets/projects/Fastag1.png';
+import Fastag2 from '/src/assets/projects/Fastag2.png';
+import Fastag3 from '/src/assets/projects/Fastag3.png';
+import Fastag4 from '/src/assets/projects/Fastag4.png';
+import Fastag5 from '/src/assets/projects/Fastag5.png';
+import Fastag6 from '/src/assets/projects/Fastag6.png';
 
 const allProjects = [
   {
     name: "Hire A Driver",
     description: "Premium ride-sharing platform with real-time tracking, smart matching algorithms, and seamless payment integration. Built for modern urban mobility.",
-    images: ['/src/assets/projects/HireDriver1.png', '/src/assets/projects/HireDriver2.png', '/src/assets/projects/HireDriver3.png', '/src/assets/projects/HireDriver4.png'],
+    images: [HireDriver1, HireDriver2, HireDriver3, HireDriver4],
     tech: ["PHP", "jQuery", "MySQL", "Node.js", "React"],
     liveLink: "https://d121.vvelocity.com/Hire_a_driver/",
     githubLink: "https://github.com/DhawalPrajapat/Hire-car-driver",
@@ -25,7 +95,7 @@ const allProjects = [
   {
     name: "Jain Sangh App",
     description: "Community management platform for religious organizations with event scheduling, member directory, and spiritual content management system.",
-    images: ['/src/assets/projects/JainSangh1.jpg'],
+    images: [JainSangh1],
     tech: ["Flutter", "Laravel", "MySQL", "Firebase", "Payment Gateway"],
     liveLink: "https://play.google.com/store/apps/details?id=app.management.jainsangh",
     githubLink: "#",
@@ -37,13 +107,7 @@ const allProjects = [
     name: "TeacherBuilder – Online Teacher Certification Platform",
     description:
       "Accredited online platform for Texas alternative teacher certification with step-by-step onboarding, flexible online coursework, TExES exam preparation, and first-year teaching support to help aspiring educators achieve certification efficiently.",
-    images: [
-      "/src/assets/projects/TeacherBuilder1.png",
-      "/src/assets/projects/TeacherBuilder2.png",
-      "/src/assets/projects/TeacherBuilder3.png",
-      "/src/assets/projects/TeacherBuilder4.png",
-      "/src/assets/projects/TeacherBuilder5.png"
-    ],
+    images: [TeacherBuilder1, TeacherBuilder2, TeacherBuilder3, TeacherBuilder4, TeacherBuilder5],
     tech: ["React", "Node.js", "PHP", "MySQL", "JavaScript"],
     liveLink: "https://www.teacherbuilder.com/",
     githubLink: "",
@@ -54,7 +118,7 @@ const allProjects = [
   {
     name: "Nagar Bazaar – Furniture E-commerce",
     description: "Local marketplace connecting vendors and customers with inventory management, order tracking, and multi-vendor support for small businesses.",
-    images: ['/src/assets/projects/NagarBazaar1.jpg', '/src/assets/projects/NagarBazaar2.jpg', '/src/assets/projects/NagarBazaar3.jpg', '/src/assets/projects/NagarBazaar4.jpg', '/src/assets/projects/NagarBazaar5.jpg',],
+    images: [NagarBazaar1, NagarBazaar2, NagarBazaar3, NagarBazaar4, NagarBazaar5],
     tech: ["React", "Node.js", "PostgreSQL", "AWS S3", "Razorpay"],
     liveLink: "https://play.google.com/store/apps/details?id=com.webikka.nagarbazaar",
     githubLink: "#",
@@ -66,12 +130,7 @@ const allProjects = [
     name: "Spot On Tech – IT Support & Technology Management",
     description:
       "Comprehensive IT support platform that streamlines technology management for businesses, reducing downtime and improving operational efficiency. Provides a single point of contact for handling tech issues, vendor coordination, and problem resolution to keep business operations running smoothly.",
-    images: [
-      "/src/assets/projects/SpotOnTech1.png",
-      "/src/assets/projects/SpotOnTech2.png",
-      "/src/assets/projects/SpotOnTech3.png",
-      "/src/assets/projects/SpotOnTech4.png"
-    ],
+    images: [SpotOnTech1, SpotOnTech2, SpotOnTech3, SpotOnTech4],
     tech: ["WordPress", "PHP", "JavaScript", "HTML/CSS", "Responsive Design"],
     liveLink: "https://spotontech.com/",
     githubLink: "",
@@ -82,7 +141,7 @@ const allProjects = [
   {
     name: "24ItSupport – IT Services & Products Platform",
     description: "Comprehensive IT services and product platform with service booking, enquiry management, secure Razorpay integration, multilingual support, and role-based dashboards for users, admins, and providers.",
-    images: ['/src/assets/projects/24ItSupport1.png', '/src/assets/projects/24ItSupport5.jpg', '/src/assets/projects/24ItSupport2.png', '/src/assets/projects/24ItSupport6.jpg', '/src/assets/projects/24ItSupport3.png', '/src/assets/projects/24ItSupport4.png', '/src/assets/projects/24ItSupport7.jpg', '/src/assets/projects/24ItSupport8.jpg',],
+    images: [Support1, Support5, Support2, Support6, Support3, Support4, Support7, Support8],
     tech: ["Laravel", "Vue.js", "MySQL", "RazorPay", "API"],
     liveLink: "https://24itsupport.com/",
     githubLink: "",
@@ -93,7 +152,7 @@ const allProjects = [
   {
     name: "Multi-Industry UI Design Collection",
     description: "A diverse collection of Figma UI designs across industries including eldercare, fashion e-commerce, SEO tools, pet tracking, automotive toll systems, and industrial manufacturing. Each design features user-centric layouts, responsive structures, and tailored flows—ranging from product catalogs and dashboards to real-time tracking and healthcare interfaces—demonstrating versatility in creating functional and visually appealing digital experiences.",
-    images: ['/src/assets/projects/FootGlider1.png', '/src/assets/projects/Kyndmark1.png', '/src/assets/projects/RankIt1.png', '/src/assets/projects/UnitedRubber1.png', '/src/assets/projects/Welldercare1.png', '/src/assets/projects/FootGlider3.png', '/src/assets/projects/Kyndmark4.png', '/src/assets/projects/RankIt4.png', '/src/assets/projects/UnitedRubber6.png', '/src/assets/projects/Welldercare4.png'],
+    images: [FootGlider1, Kyndmark1, RankIt1, UnitedRubber1, Welldercare1, FootGlider3, Kyndmark4, RankIt4, UnitedRubber6, Welldercare4],
     tech: ["Figma", "UI/UX", "Figma Password: Cre8ive@2025"],
     liveLink: "https://www.figma.com/design/KVVuiiFFPoY8CbDgxSEoFF/Portfolio?node-id=0-1&t=mkdXZHqKq6UUWX9w-1",
     githubLink: "",
@@ -104,7 +163,7 @@ const allProjects = [
   {
     name: "Toy Shop – E-commerce Platform for Toys & Games",
     description: "Toy e-commerce platform with dynamic product catalog, secure checkout, admin dashboard, payment integration, and mobile-responsive design for seamless toy and game shopping experience.",
-    images: ['/src/assets/projects/ToyEcom1.png', '/src/assets/projects/ToyEcom2.png', '/src/assets/projects/ToyEcom3.png', '/src/assets/projects/ToyEcom4.png', '/src/assets/projects/ToyEcom5.png', '/src/assets/projects/ToyEcom6.png',],
+    images: [ToyEcom1, ToyEcom2, ToyEcom3, ToyEcom4, ToyEcom5, ToyEcom6],
     tech: ["Laravel", "MySQL", "JavaScript", "HTML/CSS", "Payment Gateway", "Bootstrap", "React"],
     liveLink: "",
     githubLink: "https://github.com/timberlin12/Toy-Ecommerce",
@@ -115,7 +174,7 @@ const allProjects = [
   {
     name: "Pet Tracker – Figma UI design",
     description: "Design for a smart pet monitoring app featuring real-time location tracking, activity monitoring dashboard, health record screens, reminder system, and mobile-responsive design to ensure pet safety and well-being.",
-    images: ['/src/assets/projects/PetTracker1.png', '/src/assets/projects/PetTracker2.png', '/src/assets/projects/PetTracker3.png', '/src/assets/projects/PetTracker4.png', '/src/assets/projects/PetTracker5.png', '/src/assets/projects/PetTracker6.png'],
+    images: [PetTracker1, PetTracker2, PetTracker3, PetTracker4, PetTracker5, PetTracker6],
     tech: [ "Figma", "UI/UX"],
     liveLink: "https://www.figma.com/design/sDcYE1741ZbRQcol9hCc3S/PETPAL?node-id=44-763&p=f",
     githubLink: "",
@@ -126,7 +185,7 @@ const allProjects = [
   {
     name: "CRM System – Real Estate Client & Lead Management",
     description: "Custom CRM system for real estate lead management with client tracking, property listings, task assignments, communication history, and performance monitoring built using Core PHP.",
-    images: ['/src/assets/projects/CRM1.png', '/src/assets/projects/CRM2.png', '/src/assets/projects/CRM3.jpg', '/src/assets/projects/CRM4.jpg',],
+    images: [CRM1, CRM2, CRM3, CRM4],
     tech: [ "Laravel", "Core PHP", "MySQL", "JavaScript", "API Integration"],
     liveLink: "https://roharealty.com/",
     githubLink: "",
@@ -137,7 +196,7 @@ const allProjects = [
   {
     name: "Fastag – Figma UI design",
     description: "Design for a digital toll payment and vehicle management system featuring user-friendly dashboard, vehicle linking screens, wallet recharge flow, transaction history, KYC process, and mobile-responsive layouts for seamless toll management experience.",
-    images: ['/src/assets/projects/Fastag1.png', '/src/assets/projects/Fastag2.png', '/src/assets/projects/Fastag3.png', '/src/assets/projects/Fastag4.png', '/src/assets/projects/Fastag5.png', '/src/assets/projects/Fastag6.png',],
+    images: [Fastag1, Fastag2, Fastag3, Fastag4, Fastag5, Fastag6],
     tech: ["Figma", "UI/UX"],
     liveLink: "https://www.figma.com/design/UQaMWsQYTTmLVqkvZOJZY5/Fastag?node-id=5-133&p=f",
     githubLink: "",
@@ -314,17 +373,6 @@ const AllProjects = () => {
                         Live Demo
                       </Button>
                     )}
-                    {/* project.githubLink && (
-                      <Button 
-                        size="sm" 
-                        variant="ghost"
-                        className="hover:text-primary transition-colors flex-1"
-                        onClick={() => window.open(project.githubLink, "_blank")}
-                      >
-                        <Github className="h-3 w-3 mr-1" />
-                        Code
-                      </Button>
-                    )*/}
                   </div>
                 </div>
               </Card>

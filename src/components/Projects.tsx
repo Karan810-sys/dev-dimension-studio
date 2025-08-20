@@ -10,16 +10,49 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
+// Import existing hero images (if still needed)
 import hireDriverImage from "@/assets/hire-driver-project.jpg"
 import jainSanghImage from "@/assets/jain-sangh-project.jpg"
 import nagarBazaarImage from "@/assets/nagar-bazaar-project.jpg"
 import filingWorldImage from "@/assets/filing-world-project.jpg"
 
+// Import all project images
+import HireDriver1 from "@/assets/projects/HireDriver1.png"
+import HireDriver2 from "@/assets/projects/HireDriver2.png"
+import HireDriver3 from "@/assets/projects/HireDriver3.png"
+import HireDriver4 from "@/assets/projects/HireDriver4.png"
+
+import JainSangh1 from "@/assets/projects/JainSangh1.jpg"
+
+import Fastag1 from "@/assets/projects/Fastag1.png"
+import Fastag2 from "@/assets/projects/Fastag2.png"
+import Fastag3 from "@/assets/projects/Fastag3.png"
+import Fastag4 from "@/assets/projects/Fastag4.png"
+import Fastag5 from "@/assets/projects/Fastag5.png"
+import Fastag6 from "@/assets/projects/Fastag6.png"
+
+import SpotOnTech1 from "@/assets/projects/SpotOnTech1.png"
+import SpotOnTech2 from "@/assets/projects/SpotOnTech2.png"
+import SpotOnTech3 from "@/assets/projects/SpotOnTech3.png"
+import SpotOnTech4 from "@/assets/projects/SpotOnTech4.png"
+
+import NagarBazaar1 from "@/assets/projects/NagarBazaar1.jpg"
+import NagarBazaar2 from "@/assets/projects/NagarBazaar2.jpg"
+import NagarBazaar3 from "@/assets/projects/NagarBazaar3.jpg"
+import NagarBazaar4 from "@/assets/projects/NagarBazaar4.jpg"
+import NagarBazaar5 from "@/assets/projects/NagarBazaar5.jpg"
+
+import TeacherBuilder1 from "@/assets/projects/TeacherBuilder1.png"
+import TeacherBuilder2 from "@/assets/projects/TeacherBuilder2.png"
+import TeacherBuilder3 from "@/assets/projects/TeacherBuilder3.png"
+import TeacherBuilder4 from "@/assets/projects/TeacherBuilder4.png"
+import TeacherBuilder5 from "@/assets/projects/TeacherBuilder5.png"
+
 const projects = [
   {
     name: "Hire A Driver",
     description: "Premium ride-sharing platform with real-time tracking, smart matching algorithms, and seamless payment integration. Built for modern urban mobility.",
-    images: ['/src/assets/projects/HireDriver1.png', '/src/assets/projects/HireDriver2.png', '/src/assets/projects/HireDriver3.png', '/src/assets/projects/HireDriver4.png'],
+    images: [HireDriver1, HireDriver2, HireDriver3, HireDriver4],
     tech: ["PHP", "jQuery", "MySQL", "Node.js", "React"],
     liveLink: "https://d121.vvelocity.com/Hire_a_driver/",
     githubLink: "https://github.com/DhawalPrajapat/Hire-car-driver",
@@ -30,7 +63,7 @@ const projects = [
   {
     name: "Jain Sangh App",
     description: "Community management platform for religious organizations with event scheduling, member directory, and spiritual content management system.",
-    images: ['/src/assets/projects/JainSangh1.jpg'],
+    images: [JainSangh1],
     tech: ["Flutter", "Laravel", "MySQL", "Firebase", "Payment Gateway"],
     liveLink: "https://play.google.com/store/apps/details?id=app.management.jainsangh",
     githubLink: "#",
@@ -41,7 +74,7 @@ const projects = [
   {
     name: "Fastag – Figma UI design",
     description: "Design for a digital toll payment and vehicle management system featuring user-friendly dashboard, vehicle linking screens, wallet recharge flow, transaction history, KYC process, and mobile-responsive layouts for seamless toll management experience.",
-    images: ['/src/assets/projects/Fastag1.png', '/src/assets/projects/Fastag2.png', '/src/assets/projects/Fastag3.png', '/src/assets/projects/Fastag4.png', '/src/assets/projects/Fastag5.png', '/src/assets/projects/Fastag6.png',],
+    images: [Fastag1, Fastag2, Fastag3, Fastag4, Fastag5, Fastag6],
     tech: ["Figma", "UI/UX"],
     liveLink: "https://www.figma.com/design/UQaMWsQYTTmLVqkvZOJZY5/Fastag?node-id=5-133&p=f",
     githubLink: "",
@@ -53,12 +86,7 @@ const projects = [
     name: "Spot On Tech – IT Support & Technology Management",
     description:
       "Comprehensive IT support platform that streamlines technology management for businesses, reducing downtime and improving operational efficiency. Provides a single point of contact for handling tech issues, vendor coordination, and problem resolution to keep business operations running smoothly.",
-    images: [
-      "/src/assets/projects/SpotOnTech1.png",
-      "/src/assets/projects/SpotOnTech2.png",
-      "/src/assets/projects/SpotOnTech3.png",
-      "/src/assets/projects/SpotOnTech4.png"
-    ],
+    images: [SpotOnTech1, SpotOnTech2, SpotOnTech3, SpotOnTech4],
     tech: ["WordPress", "PHP", "JavaScript", "HTML/CSS", "Responsive Design"],
     liveLink: "https://spotontech.com/",
     githubLink: "",
@@ -69,7 +97,7 @@ const projects = [
   {
     name: "Nagar Bazaar – Furniture E-commerce",
     description: "Local marketplace connecting vendors and customers with inventory management, order tracking, and multi-vendor support for small businesses.",
-    images: ['/src/assets/projects/NagarBazaar1.jpg', '/src/assets/projects/NagarBazaar2.jpg', '/src/assets/projects/NagarBazaar3.jpg', '/src/assets/projects/NagarBazaar4.jpg', '/src/assets/projects/NagarBazaar5.jpg',],
+    images: [NagarBazaar1, NagarBazaar2, NagarBazaar3, NagarBazaar4, NagarBazaar5],
     tech: ["React", "Node.js", "PostgreSQL", "AWS S3", "Razorpay"],
     liveLink: "https://play.google.com/store/apps/details?id=com.webikka.nagarbazaar",
     githubLink: "#",
@@ -81,13 +109,7 @@ const projects = [
     name: "TeacherBuilder – Online Teacher Certification Platform",
     description:
       "Accredited online platform for Texas alternative teacher certification with step-by-step onboarding, flexible online coursework, TExES exam preparation, and first-year teaching support to help aspiring educators achieve certification efficiently.",
-    images: [
-      "/src/assets/projects/TeacherBuilder1.png",
-      "/src/assets/projects/TeacherBuilder2.png",
-      "/src/assets/projects/TeacherBuilder3.png",
-      "/src/assets/projects/TeacherBuilder4.png",
-      "/src/assets/projects/TeacherBuilder5.png"
-    ],
+    images: [TeacherBuilder1, TeacherBuilder2, TeacherBuilder3, TeacherBuilder4, TeacherBuilder5],
     tech: ["React", "Node.js", "PHP", "MySQL", "JavaScript"],
     liveLink: "https://www.teacherbuilder.com/",
     githubLink: "",
